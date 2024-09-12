@@ -18,7 +18,7 @@ const data = [
   {
     name: 'Kov',
     2024: 2000,
-    2023: 9800,
+    2023: 1800,
   },
   {
     name: 'Bal',
@@ -74,6 +74,46 @@ const FinanceChartTrumpalaike = () => {
             <h1 className='text-lg font-semibold'>Trumpalaikės nuomos statistika</h1>
             <Image src="/moreDark.png" alt="" width={20} height={20}/>
             </div>
+            <ResponsiveContainer width="100%" height="90%">
+        <LineChart
+          width={500}
+          height={300}
+          data={data}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" stroke="#ddd" />
+          <XAxis dataKey="name" 
+          axisLine={false}
+          tick={{fill:"#d1d5db"}}
+          tickLine={false}
+          tickMargin={10}/>
+          <YAxis axisLine={false}
+          tick={{fill:"#d1d5db"}}
+          tickLine={false}
+          tickMargin={15}/>
+          <Tooltip />
+          <Legend 
+          align="center"
+          verticalAlign="top"
+          wrapperStyle={{paddingTop: "10px",paddingBottom:"30px"}}/>
+          <Line 
+          type="monotone" 
+          dataKey="2024" 
+          stroke="#C3EBFA"
+          strokeWidth={5}
+          />
+          <Line 
+          type="monotone" 
+          dataKey="2023" 
+          stroke="#CFCEFF" 
+          strokeWidth={5}/>
+        </LineChart>
+      </ResponsiveContainer>
         </div>
   )
 }
