@@ -5,37 +5,37 @@ import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 
 const data = [
   {
-    name: 'Mon',
+    name: 'Pir',
     važiuoja: 12,
     stovi: 33,
   },
   {
-    name: 'Tue',
+    name: 'Ant',
     važiuoja: 14,
     stovi: 30,
   },
   {
-    name: 'Wed',
+    name: 'Tre',
     važiuoja: 18,
     stovi: 26,
   },
   {
-    name: 'Thu',
+    name: 'Ket',
     važiuoja: 20,
     stovi: 24,
   },
   {
-    name: 'Fri',
+    name: 'Pen',
     važiuoja: 19,
     stovi: 25,
   },
   {
-    name: 'Sat',
+    name: 'Šeš',
     važiuoja: 17,
     stovi: 27,
   },
   {
-    name: 'Sun',
+    name: 'Sek',
     važiuoja: 27,
     stovi: 17,
   },

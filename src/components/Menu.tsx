@@ -45,7 +45,7 @@ const menuItems = [
       {
         icon: "/teacher.png",
         label: "Automobiliai",
-        href: "/list/teachers",
+        href: "/list/cars",
         visible: ["admin", "teacher"],
       },
       {
