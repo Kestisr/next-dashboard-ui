@@ -1,4 +1,6 @@
 import Announcements from "@/components/Announcements"
+import FormModal from "@/components/FormModal"
+import Performance from "@/components/Performance"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -13,10 +15,25 @@ const SingleCarPage = () => {
         {/*Automobilio info kortelė*/}
         <div className="bg-lamaSky py-6 px-4 rounded-md flex-1 flex gap-4">
             <div className="w-1/3">
-            <Image src="/cars/lvi278.webp" alt="" width={144} height={144} className="w-36 h-36 rounded-md object-cover"/>
+            <Image src="/cars/lvi278.webp" alt="" width={144} height={144} className="w-36 h-36 md:w-full rounded-md object-cover"/>
             </div>
             <div className="w-2/3 flex flex-col justify-between gap-4">
+            <div className="flex items-center gap-4">
+
             <h1 className="text-xl font-semibold">Toyota Yaris</h1>
+            <FormModal table="cars" type="update" data={{
+                    id: 1,
+                    automobilioNumeris: "LVI-278",
+                    marke: "Toyota",
+                    modelis: "Yaris",
+                    photo:
+                    "/cars/lvi278-1.jpg",
+                    pagaminimoMetai: "2022",
+                    automobilioVieta: "KLP",
+                    skyrius: "Trumpalaikė",
+                    uzimtumas: "Stovi",
+                }}/>
+            </div>
             <p className="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
                 <div className="flex items-center justify-between gap-2 flex-wrap text-xs font-medium">
@@ -81,17 +98,18 @@ const SingleCarPage = () => {
         </div>
         </div>
         {/* Dešinė pusė */}
-        <div className="w-full xl:w-1/3">
+        <div className="w-full xl:w-1/3 flex flex-col gap-4">
         <div className="bg-white p-4 rounded-md">
             <h1 className="text-xl font-semibold">Nuorodos</h1>
             <div className="mt-4 flex gap-4 flex-wrap text-xs text-gray-500">
-                <Link href="/">Kelioniu lapai</Link>
-                <Link href="/">Draudimo dokumentai</Link>
-                <Link href="/">Defe</Link>
-                <Link href="/"></Link>
-                <Link href="/"></Link>
+                <Link className="p-3 rounded-md bg-lamaSkyLight" href="/">Kelioniu lapai</Link>
+                <Link className="p-3 rounded-md bg-lamaPurpleLight" href="/">Draudimo dokumentai</Link>
+                <Link className="p-3 rounded-md bg-lamaYellowLight" href="/">Auto Informacija</Link>
+                <Link className="p-3 rounded-md bg-pink-50" href="/">Garažas</Link>
+                <Link className="p-3 rounded-md bg-lamaSkyLight" href="/">Reikalinga Inforamcija</Link>
             </div>
         </div>
+        <Performance/>
         <Announcements/>
         </div>
     </div>
