@@ -1,4 +1,6 @@
+import Announcements from "@/components/Announcements"
 import Image from "next/image"
+import Link from "next/link"
 
 
 const SingleCarPage = () => {
@@ -79,7 +81,19 @@ const SingleCarPage = () => {
         </div>
         </div>
         {/* Dešinė pusė */}
-        <div className="w-full xl:w-1/3">r</div>
+        <div className="w-full xl:w-1/3">
+        <div className="bg-white p-4 rounded-md">
+            <h1 className="text-xl font-semibold">Nuorodos</h1>
+            <div className="mt-4 flex gap-4 flex-wrap text-xs text-gray-500">
+                <Link href="/">Kelioniu lapai</Link>
+                <Link href="/">Draudimo dokumentai</Link>
+                <Link href="/">Defe</Link>
+                <Link href="/"></Link>
+                <Link href="/"></Link>
+            </div>
+        </div>
+        <Announcements/>
+        </div>
     </div>
   )
 }
